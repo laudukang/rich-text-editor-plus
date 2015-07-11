@@ -38,4 +38,6 @@ ueditor demo jsp/ckeditor demo jsp/kindeditor demo jsp
 2. 添加插入附件的文件类型图标，用于插入附件后在前面显示
 3. 修改了kindeditor/jsp文件夹下的file_manager_json.jsp和upload_json.jsp文件，用于上传文件/文件管理器的支持
 4. 添加/修改了jwplayer插件，用于播放流媒体文件
-5. kindeditor demo这部分的最后修改时间2015年7月12日01:30:29
+5. 虚拟路径
+   `<Context path="/EditorDemo/kindeditorupload" docBase="D:\apache\EditorDemo\kindeditor\kindeditorupload"/>`
+6. kindeditor demo这部分的最后修改时间2015年7月12日01:30:29
