@@ -21,7 +21,7 @@ ueditor demo jsp/ckeditor demo jsp/kindeditor demo jsp
 4. 更改了ueditor的默认上传位置，使用了tomcat的虚拟路径，避免重新部署后丢失先前的文件，这里修改了com.baidu.ueditor包下的ConfigManager.java类，主要是对ueditor.config.js虚拟路径配置的处理，还修改了com.baidu.ueditor.hunter包下的FileManager.java和com.baidu.ueditor.upload包下的BinaryUploader.java，主要是对配置了tomcat虚拟路径后的处理，特别地，修改了原图片在线管理/文件在线附件的获取，原ueditor可以获取文件的个数并显示出来，但图片/文件显示不了，因为其封装的路径有文件，原ueditor的封装使用了绝对路径，即把
 `D:\Tomcat 7.0.57\webapps\EditorDemo\upload\image\20150711\1436591786822080766.jpg`
 这样的文件路径返回前台，这样子前台ueditor是获取不了文件的，所以改成了相对路径，见FileManager类下的getPath (File)方法；关于tomcat虚拟路径的配置，修改tomcat conf目录下的server.xml，在Host里面添加:
-`<Context path="/EditorDemo/upload" docBase="D:\apache\ueditor\upload"/>`；这部分内容参考了http://blog.csdn.net/will_awoke/article/details/39579061
+`<Context path="/EditorDemo/ueditorupload" docBase="D:\apache\EditorDemo\ueditor\ueditorupload"/>`；这部分内容参考了http://blog.csdn.net/will_awoke/article/details/39579061
 
 5. 是否保存上传文件到虚拟路径的配置请参见ueditor/jsp/下的config.json，xxxRealMappingPath指定了物理路径的位置
 
@@ -29,5 +29,13 @@ ueditor demo jsp/ckeditor demo jsp/kindeditor demo jsp
 
 7. 该版本基于ubuilder_1_4_3-utf8-jsp修改
 
-8. 最后修改时间2015年7月11日22:31:04
+8. ueditor demo这部分的最后修改时间2015年7月11日22:31:04
 
+
+
+#kindeditor demo修改说明
+1. 修改代码高亮为SyntaxHighlighter插件
+2. 添加插入附件的文件类型图标，用于插入附件后在前面显示
+3. 修改了kindeditor/jsp文件夹下的file_manager_json.jsp和upload_json.jsp文件，用于上传文件/文件管理器的支持
+4. 添加/修改了jwplayer插件，用于播放流媒体文件
+5. kindeditor demo这部分的最后修改时间2015年7月12日01:30:29
