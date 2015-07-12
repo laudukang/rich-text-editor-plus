@@ -34,10 +34,18 @@ ueditor demo jsp/ckeditor demo jsp/kindeditor demo jsp
 
 
 #kindeditor demo修改说明
-1. 修改代码高亮为SyntaxHighlighter插件
-2. 添加插入附件的文件类型图标，用于插入附件后在前面显示
-3. 修改了kindeditor/jsp文件夹下的file_manager_json.jsp和upload_json.jsp文件，用于上传文件/文件管理器的支持
-4. 添加/修改了jwplayer插件，用于播放流媒体文件
-5. 虚拟路径
+1. 基于kindeditor-4.1.10修改
+2. 修改代码高亮为SyntaxHighlighter插件
+3. 添加插入附件的文件类型图标，用于插入附件后在前面显示
+4. 修改了kindeditor/jsp文件夹下的file_manager_json.jsp和upload_json.jsp文件，用于上传文件/文件管理器的支持
+5. 添加/修改了jwplayer插件，用于播放流媒体文件
+6. 虚拟路径
    `<Context path="/EditorDemo/kindeditorupload" docBase="D:\apache\EditorDemo\kindeditor\kindeditorupload"/>`
-6. kindeditor demo这部分的最后修改时间2015年7月12日01:30:29
+7. kindeditor demo这部分的最后修改时间2015年7月12日01:30:29
+
+
+#ckeditor demo修改说明
+1. 基于ckeditor_4.5.1_full修改
+2. 添加了jsp/browse.jsp和jsp/upload.jsp两个文件，分别用于浏览服务器文件和上传图片/附件到服务器，config.js配置了这两个文件的调用，修改返回路径为服务器相对路径saveUrl，修改上传文件新文件名为当前日期+随机码，tomcat需要配置虚拟路径\
+	`<Context path="/EditorDemo/ckeditorupload" docBase="D:\apache\EditorDemo\ckeditor\ckeditorupload"/>`
+3. ckeditor demo这部分的最后修改时间2015年7月12日12:11:55
